@@ -7,20 +7,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cadastro de Categoria</title>
+<title>Cadastro de Unidade</title>
 </head>
 <body>
-     <%@ include file="menu.jsp"%>
- 
+     
+ <%@ include file="menu.jsp"%>
 	<br />
-	<form method='post' action='CadastroCategoria'>
+	<form method='post' action='CadastroUnidade'>
 	
-	    <input type='hidden' name='id' value="${categoria.id}" />
+	    <input type='hidden' name='id' value="${unidade.id}" />
 		<table>
 			
 			<tr>
 				<td>Nome</td>
-				<td><input type='text' name='nome' value="${categoria.nome}" /></td>
+				<td><input type='text' name='nome' value="${unidade.nome}" /></td>
 			</tr>
 
 			<tr>

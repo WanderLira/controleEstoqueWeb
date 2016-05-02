@@ -10,6 +10,7 @@
 <title>Cadastro de Usuario</title>
 </head>
 <body>
+
 	<br />
 	<form method='post' action='CadastroUsuario'>
 
@@ -48,5 +49,9 @@
 		</table>
 
 	</form>
+	<br />
+	<br />
+	<br />
+	<%@ include file="rodape.jsp"%>
 </body>
 </html>

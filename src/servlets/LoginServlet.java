@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("usuario", usuario);
 		
-		response.sendRedirect("ListarCategoria");
+		response.sendRedirect("index.jsp");
 		
 	}
 

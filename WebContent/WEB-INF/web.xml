@@ -54,4 +54,52 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/Logout</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>CadastroUnidadeServlet</servlet-name>
+    <servlet-class>servlets.CadastroUnidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CadastroUnidadeServlet</servlet-name>
+    <url-pattern>/CadastroUnidade</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListarUnidadeServlet</servlet-name>
+    <servlet-class>servlets.ListarUnidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarUnidadeServlet</servlet-name>
+    <url-pattern>/ListarUnidade</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListarProdutoServlet</servlet-name>
+    <servlet-class>servlets.ListarProdutoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarProdutoServlet</servlet-name>
+    <url-pattern>/ListarProduto</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RemoverProdutoServlet</servlet-name>
+    <servlet-class>servlets.RemoverProdutoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoverProdutoServlet</servlet-name>
+    <url-pattern>/RemoverProduto</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RemoverUsuarioServlet</servlet-name>
+    <servlet-class>servlets.RemoverUsuarioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoverUsuarioServlet</servlet-name>
+    <url-pattern>/RemoverUsuario</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CadastroProdutoServlet</servlet-name>
+    <servlet-class>servlets.CadastroProdutoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CadastroProdutoServlet</servlet-name>
+    <url-pattern>/CadastroProduto</url-pattern>
+  </servlet-mapping>
 </web-app>

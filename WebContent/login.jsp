@@ -24,5 +24,9 @@
 		<a href="CadastroUsuario" class="btn btn-lg btn-success btn-block">Novo
 			Usuario</a>
 	</fieldset>
+	<br />
+	<br />
+	<br />
+	<%@ include file="rodape.jsp"%>
 </body>
 </html>

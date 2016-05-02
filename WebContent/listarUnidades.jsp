@@ -11,10 +11,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Listagem de Categorias</title>
+<title>Listagem de Unidades</title>
 </head>
 <body>
-	<%@ include file="menu.jsp"%>
+
+<%@ include file="menu.jsp"%>
 	
 	<br />
 	<c:if test="${mensagem != null}">
@@ -26,11 +27,11 @@
 	<br />
 	
 	
-		<a href='CadastroCategoria'>Novo</a>
+		<a href='CadastroUnidade'>Novo</a>
 	
 	
 	<br />
-	<form method="get" action="ListarCategoria">
+	<form method="get" action="ListarUnidade">
 		Nome:<input type="text" name="nomeFiltro" value="${param.nomeFiltro}" />
 		<input type="submit" value="pesquisar">
 	</form>
@@ -42,11 +43,11 @@
 			<td>Nome</td>
 			<td>Ações</td>
 		</tr>
-		<c:forEach var="categoria" items="${categorias}">
+		<c:forEach var="unidade" items="${unidades}">
 			<tr>
-				<td>${categoria.nome}</td>
-				<td><a href='RemoverCategoria?id=${categoria.id}'>remover</a> <a
-					href='CadastroCategoria?id=${categoria.id}'>editar</a></td>
+				<td>${unidade.nome}</td>
+				<td><a href='RemoverUnidade?id=${unidade.id}'>remover</a> <a
+					href='CadastroUnidade?id=${unidade.id}'>editar</a></td>
 			</tr>
 		</c:forEach>
 	</table>
@@ -55,5 +56,4 @@
 	<br />
 	<%@ include file="rodape.jsp"%>
 </body>
-
 </html>

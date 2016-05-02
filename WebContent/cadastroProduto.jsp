@@ -7,20 +7,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cadastro de Categoria</title>
+<title>Cadastro de Produto</title>
 </head>
 <body>
      <%@ include file="menu.jsp"%>
  
 	<br />
-	<form method='post' action='CadastroCategoria'>
+	<form method='post' action='CadastroProduto'>
 	
-	    <input type='hidden' name='id' value="${categoria.id}" />
+	    <input type='hidden' name='id' value="${produto.id}" />
 		<table>
 			
 			<tr>
 				<td>Nome</td>
-				<td><input type='text' name='nome' value="${categoria.nome}" /></td>
+				<td><input type='text' name='nome' value="${produto.nome}" /></td>
+			</tr>
+			
+			<tr>
+				<td>Preço</td>
+				<td><input type='text' name='precoVenda' value="${produto.precoVenda}"/></td>
+			</tr>
+			<tr>
+				<td>Quantidade</td>
+				<td><input type='text' name='qtdeEstoque' value="${produto.qtdeEstoque}"/></td>
+			</tr>
+			<tr>
+				<td>Categoria</td>
+				<td><input type='text' name='categoria' value="${produto.categoria}"/></td>
+			</tr>
+			
+			<tr>
+				<td>Unidade</td>
+				<td><input type='text' name='unidade' value="${produto.unidade}"/></td>
 			</tr>
 
 			<tr>
