@@ -23,6 +23,7 @@ public class ListarProdutoServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		String filtroNome = request.getParameter("nomeFiltro");
+		
 		Produto filtro = new Produto();
 		filtro.setNome(filtroNome);
 

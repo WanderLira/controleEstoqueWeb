@@ -31,9 +31,10 @@
 		    <form method="get" action="ListarProduto">
 		    
 		    Nome:<input type="text" name="nomeFiltro" value="${param.nomeFiltro}"/>
-		   
 		    Preco:<input type="text" name="precoFiltro" value="${param.precoFiltro}"/>
-		    
+		    Quantidade:<input type="text" name="precoFiltro" value="${param.qtdeEstoque}"/>
+		    Categoria:<input type="text" name="precoFiltro" value="${param.categoria}"/>
+		    Unidade:<input type="text" name="precoFiltro" value="${param.unidade}"/>			    
 		    <input type="submit" value="pesquisar">
 		    </form>
 		    
@@ -51,7 +52,10 @@
 			
 		<tr>
 			<td>${produto.nome}</td>
-			<td><fmt:formatNumber type="currency" value="${produto.preco}"/></td>
+			<td><fmt:formatNumber type="currency" value="${produto.precoVenda}"/></td>
+			<td>${produto.qtdeEstoque}</td>
+			<td>${produto.categoria}</td>
+			<td>${produto.unidade}</td>
 			<td>
 				<a href='removerProduto?id=${produto.id}'>remover</a>
 				<a href='cadastroProduto?id=${produto.id}'>editar</a>
