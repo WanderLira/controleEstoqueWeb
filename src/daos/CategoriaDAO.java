@@ -19,7 +19,7 @@ public class CategoriaDAO extends AbstractDAO<Categoria> {
 	}
 
 	public List<Categoria> buscar(Categoria filtro) {
-		String str = "select c from Categoria c where upper(nome) like upper(:nome)";
+		String str = "select c from Categoria c where upper(nome) like upper(:nome) order by nome";
 		if (filtro.getNome() == null) {
 			filtro.setNome("");
 		}

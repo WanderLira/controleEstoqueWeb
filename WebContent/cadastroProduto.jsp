@@ -13,24 +13,20 @@
 <title>Cadastro de Produto</title>
 </head>
 <body>
-
-
-	<%@ include file="menu.jsp"%>
-
+	
+	<c:import url="menu.jsp" />
 	<br />
 	<br />
 	<br />
 	<br />
 	<form method='post' action='CadastroProduto'>
-
+	
 		<input type='hidden' name='id' value="${produto.id}" />
 		<table>
-
 			<tr>
 				<td>Nome</td>
 				<td><input type='text' name='nome' value="${produto.nome}" /></td>
 			</tr>
-
 			<tr>
 				<td>Preço</td>
 				<td><input type='text' name='precoVenda'
@@ -43,47 +39,43 @@
 			</tr>
 			<tr>
 				<td>Categoria</td>
-				<td><input type='text' name='categoria'
-					value="${categoria.listar}" /></td>
+				<td><select name="idCat">
+						<c:forEach var="cat" items="${categorias}">
+							<option value="${cat.id}" >${cat.nome}</option>
+						</c:forEach>
+						
+				</select></td>
 			</tr>
 
 			<tr>
 				<td>Unidade</td>
-				<td><input type='text' name='unidade'
-					value="${unidade.listar}" /></td>
+				<td><select name="idUni">
+						<c:forEach var="uni" items="${unidades}">
+							<option value="${uni.id}"  >${uni.nome}</option>
+						</c:forEach>
+						
+				</select></td>
 			</tr>
-
-
-			<select>
-				<optgroup label="Categoria">
-					<option value="volvo">${categoria.listar}</option>
-
-				</optgroup>
-
-			</select>
-			<select name="idCat">
-				<optgroup label="Unidade">
-				<option>-- categorias -- </option>
-					<c:forEach var="cat" items="${categorias}">
-					<option value="${cat.id}">${cat.nome}</option>
-					</c:forEach>
-					
-
-				</optgroup>
-			</select>
-
-
+			<tr>
+				<td>Fornecedor</td>
+				<td><select name="idFor">
+						<c:forEach var="forn" items="${fornecedores}">
+						<option value="${forn.id}"  >${forn.nome}</option>
+						</c:forEach>
+						
+				</select>
+				</td>
+			</tr>
 			<tr>
 				<td><input type='submit' value='Salvar' /></td>
 				<td></td>
 			</tr>
-
 		</table>
-
 	</form>
 	<br />
 	<br />
 	<br />
-	<%@ include file="rodape.jsp"%>
+	
+	<c:import url="rodape.jsp" />
 </body>
 </html>

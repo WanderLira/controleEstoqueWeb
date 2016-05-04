@@ -5,15 +5,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import entities.Produto;
-import services.ProdutoService;
+import entities.Unidade;
+import services.UnidadeService;
 
-public class RemoverProdutoServlet extends HttpServlet {
+public class RemoverUnidadeServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
-		ProdutoService.remover(new Produto(new Long(id)));
-		response.sendRedirect("ListarProduto");
+		UnidadeService.remover(new Unidade(new Long(id)));
+		response.sendRedirect("ListarUnidade");
 	}
 
 	

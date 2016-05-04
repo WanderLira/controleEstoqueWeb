@@ -102,4 +102,38 @@
     <servlet-name>CadastroProdutoServlet</servlet-name>
     <url-pattern>/CadastroProduto</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoverUnidadeServlet</display-name>
+    <servlet-name>RemoverUnidadeServlet</servlet-name>
+    <servlet-class>servlets.RemoverUnidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoverUnidadeServlet</servlet-name>
+    <url-pattern>/RemoverUnidade</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CadastroFornecedorServlet</servlet-name>
+    <servlet-class>servlets.CadastroFornecedorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CadastroFornecedorServlet</servlet-name>
+    <url-pattern>/CadastroFornecedor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListarFornecedorServlet</servlet-name>
+    <servlet-class>servlets.ListarFornecedorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListarFornecedorServlet</servlet-name>
+    <url-pattern>/ListarFornecedor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RemoverFornecedorServlet</servlet-name>
+    <servlet-class>servlets.RemoverFornecedorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoverFornecedorServlet</servlet-name>
+    <url-pattern>/RemoverFornecedor</url-pattern>
+  </servlet-mapping>
 </web-app>

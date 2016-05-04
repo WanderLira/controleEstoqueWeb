@@ -18,15 +18,42 @@ public class ProdutoDAO extends AbstractDAO<Produto> {
 	}
 
 	public List<Produto> buscar(Produto filtro) {
-		String str = "select p from Produto p where upper(nome) like upper(:nome)";
-		if (filtro.getNome() == null) {
+		String str = "select p from Produto p where p.nome = :nome and "
+				+ "p.precovenda = :precovenda and p.qtdeestoque = :qtdeestoque and "
+				+ "p.id_categoria = :id_categoria and p.id_unidade = :id_unidade and "
+				+ "p.id_fornecedor = :id_fornecedor order by nome";
+		if(filtro.getNome() == null){
 			filtro.setNome("");
 		}
-
-		Query query = manager.createQuery(str);
-
-		query.setParameter("nome", "%" + filtro.getNome() + "%");
-
+		
+		if(filtro.getPrecoVenda() == 0){
+			filtro.setPrecoVenda(0);
+		}
+		
+		if(filtro.getQtde_estoque() == 0){
+			filtro.setQtdeEstoque(0);
+		}
+		if(filtro.getCategoria() == null){
+			filtro.setCategoria(null);
+		}
+		if(filtro.getUnidade() == null){
+			filtro.setUnidade(null);
+		}
+		
+		if(filtro.getFornecedor() == null){
+			filtro.setFornecedor(null);
+		}
+		
+		if(filtro.getPrecoVenda() != 0 && filtro.getPrecoVenda() > 0){
+			str+=" and p.precoVenda = :precoVenda";
+		}
+		Query query=manager.createQuery(str);   
+		
+		query.setParameter("nome", "%"+filtro.getNome()+"%");
+		
+		if(filtro.getPrecoVenda() != 0 && filtro.getPrecoVenda() > 0){
+			query.setParameter("preco", filtro.getPrecoVenda());
+		}
 		return query.getResultList();
 	}
 

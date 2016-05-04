@@ -28,7 +28,7 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
 		return null;
 	}
 	public List<Usuario> buscar(Usuario filtro) {
-		String str = "select c from Usuario c where upper(nome) like upper(:nome)";
+		String str = "select c from Usuario c where upper(nome) like upper(:nome)order by nome";
 		if (filtro.getNome() == null) {
 			filtro.setNome("");
 		}

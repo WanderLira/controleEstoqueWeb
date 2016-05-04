@@ -6,7 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
@@ -23,9 +22,13 @@ public class Produto extends AbstractEntity {
 	@JoinColumn(name = "id_categoria")
 	private Categoria categoria;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "id_unidade")
 	private Unidade unidade;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_fornecedor")
+	private Fornecedor fornecedor;
 
 	public Produto(Long id) {
 		this.id = id;
@@ -89,6 +92,14 @@ public class Produto extends AbstractEntity {
 
 	public void setUnidade(Unidade unidade) {
 		this.unidade = unidade;
+	}
+
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+
+	public void setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
 	}
 
 }

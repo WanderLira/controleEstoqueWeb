@@ -13,7 +13,7 @@
 		<a href="listarProdutos.jsp">Produtos</a>
 		<a href="listarCategorias.jsp">Categorias</a>
 		<a href="listarUnidades.jsp">Unidade</a>
-		<a href="">Fornecedores</a>
+		<a href="listarFornecedores.jsp">Fornecedores</a>
 		<a href="">Clientes</a>
 		<a href="">Contato</a>
 		<a href="Logout">Sair</a>

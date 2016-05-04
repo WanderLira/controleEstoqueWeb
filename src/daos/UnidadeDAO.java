@@ -19,7 +19,7 @@ public class UnidadeDAO extends AbstractDAO<Unidade> {
 	}
 
 	public List<Unidade> buscar(Unidade filtro) {
-		String str = "select u from Unidade u where upper(nome) like upper(:nome)";
+		String str = "select u from Unidade u where upper(nome) like upper(:nome)order by nome";
 		if (filtro.getNome() == null) {
 			filtro.setNome("");
 		}

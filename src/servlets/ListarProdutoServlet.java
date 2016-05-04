@@ -22,20 +22,29 @@ public class ListarProdutoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String filtroNome = request.getParameter("nomeFiltro");
-		
-		Produto filtro = new Produto();
-		filtro.setNome(filtroNome);
-
 		HttpSession session = request.getSession(false);
 		if (session == null) {
 			response.sendRedirect("login.jsp");
 			return;
 		}
 
+
+//		String filtroNome = request.getParameter("nomeFiltro");
+//		String filtroPrecoVenda = request.getParameter("precoVendaFiltro");
+//		String filtroQtdeEstoque = request.getParameter("qtdeEstoqueFiltro");
+//		String filtroCategoria = request.getParameter("categoriaFiltro");
+//		String filtroUnidade= request.getParameter("unidadeFiltro");
+//		String filtroFornecedor = request.getParameter("fornecedorFiltro");
+
+		//Produto filtro = new Produto();
+//		filtro.setNome(filtroNome);
+//		filtro.setPrecoVenda(new Double(filtroPrecoVenda));
+//		filtro.setQtdeEstoque(new Integer(filtroQtdeEstoque));
+
+	
 		List<Produto> produtos = ProdutoService.listar();
 		request.setAttribute("produtos", produtos);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("ListarProdutos.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("listarProdutos.jsp");
 		requestDispatcher.forward(request, response);
 	}
 }
